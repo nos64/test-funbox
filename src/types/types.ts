@@ -9,4 +9,5 @@ export interface ICard {
   weight:  string; 
   unit:  string;
   linkText: string;
+  isSoldOut: boolean;
 }

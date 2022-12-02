@@ -1,8 +1,14 @@
-import { selectedHoverMessage } from '../../common/constants';
+
 import React, { useState } from 'react';
-import { ICard } from 'types/types';
-import styles from './Card.module.scss';
+
 import LinkText from './LinkText';
+
+import { selectedHoverMessage } from '../../common/constants';
+
+import { ICard } from 'types/types';
+
+import styles from './Card.module.scss';
+
 
 const Card: React.FC<ICard> = (props) => {
   const { hero, title, subtitle, amount, bonus, extra, weight, unit, linkText } = props;

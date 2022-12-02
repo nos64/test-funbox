@@ -5,18 +5,10 @@
   width: 328px;
   height: 488px;
   clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
-  background-color: $default;
+  background-color: $font-disabled;
   border-radius: 10px;
   cursor: pointer;
   transition: all .3s ease-in-out;
-
-  &:hover {
-    background-color: $hover;
-  }
-
-  &:hover>.card>.oval {
-    background-color: $hover;
-  }
 }
 
 .card {
@@ -27,23 +19,19 @@
   height: 480px;
   padding-left: 48px;
   background-color: $background-color;
-  background-image: url("../../assets/images/Photo.png");
   background-repeat: no-repeat;
   background-position: center 213px;
   border-radius: 10px;
   clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
   overflow:hidden; 
   cursor: pointer;
+  background-image: url("../../assets/images/Photo-50.png");
+  color: $font-disabled;
+  cursor: auto;
 }
 
 .heroText {
   padding: 21px 0 5px;
-  color: $font-grey;
-}
-
-.heroTextSelectedHover {
-  padding: 21px 0 5px;
-  color: $selected-hover;
 }
 
 .title {
@@ -60,7 +48,6 @@
 .description {
   font-size: 14px;
   font-weight: 700;
-  color: $font-grey;
 }
 
 .oval {
@@ -74,7 +61,7 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background-color: $default;
+  background-color: $font-disabled;
   color: $font-white;
   transition: all .3s ease-in-out;
 }
@@ -89,18 +76,15 @@
   line-height: 22px;
 }
 
-.active {
-  background-color: $selected;
-
-  &:hover {
-    background-color: $selected-hover;
-  }
-
-  &:hover>.card>.oval {
-    background-color: $selected-hover;
-  }
-
+.tagline{
+  margin-top: 14px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  color: $font-yellow;
 }
+
 
 
 
