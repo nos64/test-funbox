@@ -1,5 +1,8 @@
 import axios from 'axios';
+import { ICard } from 'types/types';
+import { BASE_URL } from '../common/constants';
 
 export const getData = async () => {
-  return await axios.get('../common/data/data.json');
+  const cardData =  await axios.get(BASE_URL);
+  return cardData;
 };

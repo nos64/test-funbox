@@ -1,22 +1,25 @@
 import React from 'react';
+import { ICard } from 'types/types';
 import styles from './Card.module.scss';
 
-const Card = () => {
+const Card: React.FC<ICard> = (props) => {
+  const { hero, title, subtitle, amount, bonus, extra, weight, unit } = props;
+
   return (
     <div className ={styles.cardContent}>
       <div className={styles.cardBorder}>
         <div className={styles.card}>
-          <p className={styles.heroText}>Сказочное заморское яство</p>
-          <h2 className={styles.title}>Нямушка</h2>
-          <p className={styles.subtitle}>с фуа-гра</p>
+          <p className={styles.heroText}>{hero}</p>
+          <h2 className={styles.title}>{title}</h2>
+          <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.description}>
-            <p>10 порций</p>
-            <p>мышь в подарок</p>
-            <p>заказчик доволен</p>
+            <p className={styles.amount}>{amount}</p>
+            <p className={styles.bonus}>{bonus}</p>
+            <p className={styles.extra}>{extra}</p>
           </div>
           <div className={styles.oval}>
-            <p className={styles.ovalCntentNum}>5</p>
-            <p className={styles.ovalCntentText}>кг</p>
+            <p className={styles.weight}>{weight}</p>
+            <p className={styles.unit}>{unit}</p>
           </div>
         </div>
       </div>
