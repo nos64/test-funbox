@@ -1,3 +1,4 @@
+import { selectedHoverMessage } from '../../common/constants';
 import React, { useState } from 'react';
 import { ICard } from 'types/types';
 import styles from './Card.module.scss';
@@ -7,14 +8,37 @@ const Card: React.FC<ICard> = (props) => {
   const { hero, title, subtitle, amount, bonus, extra, weight, unit, linkText } = props;
 
   const [isSelected, setIsSelected] = useState(false);
+  const [isMouseOnCard, setIsMouseOnCard] = useState(false);
 
-  const handleClick = () => setIsSelected(!isSelected);
+  const handleClick = () => {
+    setIsSelected(!isSelected);
+    setIsMouseOnCard(false);
+  } 
+
+  const handleMouseEnter = () => {
+    if (isSelected) {
+      setIsMouseOnCard(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (isSelected) {
+      setIsMouseOnCard(false);
+    }
+  };
 
   return (
     <div className ={styles.cardContent}>
-      <div className={isSelected ? `${styles.cardBorder} ${styles.active}` : styles.cardBorder} onClick={handleClick}>
+      <div className={isSelected ? `${styles.cardBorder} ${styles.active}` : styles.cardBorder}
+        onClick={handleClick}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         <div className={styles.card}>
-          <p className={styles.heroText}>{hero}</p>
+          {!isMouseOnCard ?
+            <p className={styles.heroText}>{hero}</p> :
+            <p className={styles.heroTextSelectedHover}>{selectedHoverMessage}</p>
+          }
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.description}>

@@ -41,6 +41,11 @@
   color: $font-grey;
 }
 
+.heroTextSelectedHover {
+  padding: 21px 0 5px;
+  color: $selected-hover;
+}
+
 .title {
   font-size: 48px;
   font-weight: 700;
