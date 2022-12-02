@@ -67,12 +67,12 @@
   position: absolute;
   bottom: 12px;
   right: 12px;
+  width: 80px;
+  height: 80px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
   border-radius: 50%;
   background-color: $default;
   color: $font-white;
@@ -99,7 +99,6 @@
   &:hover>.card>.oval {
     background-color: $selected-hover;
   }
-
 }
 
 

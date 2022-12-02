@@ -7,8 +7,8 @@ import CardList from '../../components/CardList';
 const NamushkaPage = () => {
   return (
     <Container>
-      <PageTitle/>
-      <CardList/>
+      <PageTitle />
+      <CardList />
     </Container>
   );
 };

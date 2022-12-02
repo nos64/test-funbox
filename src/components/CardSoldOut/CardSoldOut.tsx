@@ -1,20 +1,15 @@
-
-import React, { useState } from 'react';
-
-import { selectedHoverMessage } from '../../common/constants';
-
+import React from 'react';
 import { ICard } from 'types/types';
-
 import styles from './CardSoldOut.module.scss';
 
 const CardSoldOut: React.FC<ICard> = (props) => {
   const { hero, title, subtitle, amount, bonus, extra, weight, unit, linkText } = props;
 
   return (
-    <div className ={styles.cardContent}>
+    <div className={styles.cardContent}>
       <div className={styles.cardBorder}>
         <div className={styles.card}>
-            <p className={styles.heroText}>{hero}</p>
+          <p className={styles.heroText}>{hero}</p>
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.subtitle}>{subtitle}</p>
           <div className={styles.description}>
