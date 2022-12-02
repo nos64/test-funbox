@@ -1,11 +1,14 @@
+import React from 'react';
+
 import Container from '../../components/Container';
 import PageTitle from '../../components/PageTitle';
-import React from 'react';
+import CardList from '../../components/CardList';
 
 const NamushkaPage = () => {
   return (
     <Container>
       <PageTitle/>
+      <CardList/>
     </Container>
   );
 };

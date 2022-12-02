@@ -1,0 +1,152 @@
+@import '../../styles/colors.scss';
+
+.cardBorder {
+  position: relative;
+  width: 328px;
+  height: 488px;
+  clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+  background-color: $default;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+.card {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 320px;
+  height: 480px;
+  padding-left: 48px;
+  background-color: $background-color;
+  background-image: url("../../assets/images/Photo.png");
+  background-repeat: no-repeat;
+  background-position: center 213px;
+  border-radius: 10px;
+  clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+  overflow:hidden; 
+  cursor: pointer;
+}
+
+.heroText {
+  padding: 21px 0 5px;
+  color: $font-grey;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.subtitle {
+  padding-bottom: 15px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 700;
+  color: $font-grey;
+}
+
+.oval {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: $default;
+  color: $font-white;
+  transition: all .3s ease-in-out;
+}
+
+.ovalCntentNum {
+  font-size: 42px;
+  line-height: 42px;
+}
+
+.ovalCntentText {
+  font-size: 21px;
+  line-height: 22px;
+}
+
+.tagline{
+  margin-top: 14px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 15px;
+  color: $font-white;
+}
+
+.taglineBtn{
+  color: $default;
+  text-decoration: underline dotted;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+
+.background-hover {
+  background-color: var(--hover);
+}
+
+.text-hover {
+  color: var(--hover);
+}
+
+.card-tagline__btn:hover {
+  color: var(--hover);
+}
+
+.background-selected {
+  background-color: var(--selected);
+}
+
+.text-selected {
+  color: var(--selected);
+}
+
+.background-selected-hover {
+  background-color: var(--selected-hover);
+}
+
+.text-selected-hover {
+  color: var(--selected-hover);
+}
+
+.disabled,
+.reload {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.card-disabled {
+  background-image: url("./img/Photo-50.png");
+  color: var(--font-disabled);
+  cursor: auto;
+}
+
+.text-disabled {
+  color: var(--font-disabled);
+}
+
+.text-disabled-yellow {
+  color: var(--font-yellow);
+}
+
+.background-disabled {
+  background-color: var(--font-disabled);
+}
+
+
+
+
+
