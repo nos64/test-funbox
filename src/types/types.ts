@@ -8,4 +8,5 @@ export interface ICard {
   extra:  string; 
   weight:  string; 
   unit:  string;
+  linkText: string;
 }

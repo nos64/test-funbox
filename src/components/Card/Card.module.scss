@@ -9,6 +9,14 @@
   border-radius: 10px;
   cursor: pointer;
   transition: all .3s ease-in-out;
+
+  &:hover {
+    background-color: $hover;
+  }
+
+  &:hover>.card>.oval {
+    background-color: $hover;
+  }
 }
 
 .card {
@@ -76,20 +84,17 @@
   line-height: 22px;
 }
 
-.tagline{
-  margin-top: 14px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 15px;
-  color: $font-white;
-}
+.active {
+  background-color: $selected;
 
-.taglineBtn{
-  color: $default;
-  text-decoration: underline dotted;
-  cursor: pointer;
-  transition: all .3s ease-in-out;
+  &:hover {
+    background-color: $selected-hover;
+  }
+
+  &:hover>.card>.oval {
+    background-color: $selected-hover;
+  }
+
 }
 
 
