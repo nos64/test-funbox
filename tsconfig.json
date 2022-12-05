@@ -13,6 +13,7 @@
     "strict": true,
     "skipLibCheck": true,
     "baseUrl": "./src",
+    "outDir": "./dist",
     "resolveJsonModule": true
   },
   "include": ["./src/**/*", "styled.d.ts"]
