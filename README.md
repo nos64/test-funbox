@@ -1,5 +1,5 @@
 #  test-funbox
-Deploy: https://test-funbox-nos64.netlify.app/
+Deploy: https://test-funbox-f-nos64.netlify.app
 
 ##  This app created Vite
 
