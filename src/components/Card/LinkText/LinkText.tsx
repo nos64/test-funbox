@@ -13,9 +13,10 @@ const LinkText: React.FC<ILinkText> = ({ linkText, isSelected, setIsSelected }) 
       {!isSelected ? (
         <p className={styles.tagline}>
           Чего сидишь? Порадуй котэ,{' '}
-          <span className={styles.taglineBtn} onClick={() => setIsSelected(true)}>
-            купи.
-          </span>
+          <button className={styles.taglineBtn} onClick={() => setIsSelected(true)}>
+            купи
+          </button>
+          <span className={styles.dot}>.</span>
         </p>
       ) : (
         <p className={styles.tagline}>{linkText}</p>
