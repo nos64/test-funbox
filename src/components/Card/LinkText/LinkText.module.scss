@@ -10,8 +10,11 @@
 }
 
 .taglineBtn{
+  background-color: transparent;
+  border: none;
+  outline: none;
   color: $default;
-  text-decoration: underline dotted;
+  text-decoration: underline dashed;
 
   cursor: pointer;
   transition: all .3s ease-in-out;
@@ -19,4 +22,7 @@
   &:hover {
     color: $hover;
   }
+}
+.dot {
+  color: $default;
 }
