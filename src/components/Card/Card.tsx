@@ -30,34 +30,32 @@ const Card: React.FC<ICard> = (props) => {
   };
 
   return (
-    <div className={styles.cardContent}>
-      <div
-        className={isSelected ? `${styles.cardBorder} ${styles.active}` : styles.cardBorder}
-        onClick={handleClick}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
-        <div className={styles.card}>
-          {!isMouseOnCard ? (
-            <p className={styles.heroText}>{hero}</p>
-          ) : (
-            <p className={styles.heroTextSelectedHover}>{selectedHoverMessage}</p>
-          )}
-          <h2 className={styles.title}>{title}</h2>
-          <p className={styles.subtitle}>{subtitle}</p>
-          <div className={styles.description}>
-            <p className={styles.amount}>{amount}</p>
-            <p className={styles.bonus}>{bonus}</p>
-            <p className={styles.extra}>{extra}</p>
-          </div>
-          <div className={isSelected ? `${styles.oval} ${styles.active}` : styles.oval}>
-            <p className={styles.weight}>{weight}</p>
-            <p className={styles.unit}>{unit}</p>
-          </div>
+    <li
+      className={isSelected ? `${styles.cardBorder} ${styles.active}` : styles.cardBorder}
+      onClick={handleClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className={styles.card}>
+        {!isMouseOnCard ? (
+          <p className={styles.heroText}>{hero}</p>
+        ) : (
+          <p className={styles.heroTextSelectedHover}>{selectedHoverMessage}</p>
+        )}
+        <h2 className={styles.title}>{title}</h2>
+        <p className={styles.subtitle}>{subtitle}</p>
+        <div className={styles.description}>
+          <p className={styles.amount}>{amount}</p>
+          <p className={styles.bonus}>{bonus}</p>
+          <p className={styles.extra}>{extra}</p>
+        </div>
+        <div className={isSelected ? `${styles.oval} ${styles.active}` : styles.oval}>
+          <p className={styles.weight}>{weight}</p>
+          <p className={styles.unit}>{unit}</p>
         </div>
       </div>
       <LinkText linkText={linkText} isSelected={isSelected} setIsSelected={setIsSelected} />
-    </div>
+    </li>
   );
 };
 
