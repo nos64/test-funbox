@@ -3,7 +3,7 @@
 .cardBorder {
   position: relative;
   width: 328px;
-  height: 488px;
+  min-height: 488px;
   clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
   background-color: $default;
   border-radius: 10px;
@@ -24,12 +24,12 @@
   top: 4px;
   left: 4px;
   width: 320px;
-  height: 480px;
+  min-height: 480px;
   padding-left: 48px;
   background-color: $background-color;
   background-image: url("../../assets/images/Photo.png");
   background-repeat: no-repeat;
-  background-position: center 213px;
+  background-position: left -25px bottom -80%;
   border-radius: 10px;
   clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
   overflow:hidden; 

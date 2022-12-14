@@ -48,6 +48,10 @@ const Card: React.FC<ICard> = (props) => {
           <div className={styles.description}>
             <p className={styles.amount}>{amount}</p>
             <p className={styles.bonus}>{bonus}</p>
+            {/* <p className={styles.bonus}>{bonus}</p>
+            <p className={styles.bonus}>{bonus}</p>
+            <p className={styles.bonus}>{bonus}</p>
+            <p className={styles.bonus}>{bonus}</p> */}
             {extra && <p className={styles.extra}>{extra}</p>}
           </div>
           <div className={isSelected ? `${styles.oval} ${styles.active}` : styles.oval}>

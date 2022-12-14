@@ -1,20 +1,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap');
 
-@font-face {
-  font-family: 'Trebuchet MS', sans-serif;
-  font-weight: 700;
-  src: url("../src/assets/fonts/TrebuchetMS-Bold.woff") format("woff");
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Trebuchet MS', sans-serif;
+//   font-weight: 700;
+//   src: url("../src/assets/fonts/TrebuchetMS-Bold.woff") format("woff");
+//   font-display: swap;
+// }
 
-@font-face {
-  font-family: 'Trebuchet MS', sans-serif;
-  font-weight: 400;
-  src: url("../src/assets/fonts/TrebuchetMS.woff") format("woff");
-  font-display: swap;
-}
+// @font-face {
+//   font-family: 'Trebuchet MS', sans-serif;
+//   font-weight: 400;
+//   src: url("../src/assets/fonts/TrebuchetMS.woff") format("woff");
+//   font-display: swap;
+// }
 
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&display=swap');
 html {
   box-sizing: border-box;
   overflow-x: hidden;
@@ -29,14 +30,15 @@ html {
 body {
   width: 100vw;
   height: 100vh;
-  font-family: 'Trebuchet MS', sans-serif;
+  // font-family: 'Trebuchet MS', sans-serif;
+  font-family: 'Arimo', sans-serif;
   font-weight: 400;
   font-size: 16px;
   background-image: linear-gradient(180deg, 
       rgba(0, 0, 0, 0.5) 0%, 
       rgba(0, 0, 0, 5e-05) 49.88%, 
       rgba(0, 0, 0, 0.5) 100%), 
-      url("../src/assets/images/Pattern.png");
+      url("../src/assets/images/Pattern1.png");
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
