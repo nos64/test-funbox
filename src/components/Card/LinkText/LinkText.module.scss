@@ -1,6 +1,6 @@
 @import '../../../styles/colors.scss';
 
-.tagline{
+.tagline {
   margin-top: 14px;
   font-size: 13px;
   font-weight: 400;
@@ -9,20 +9,25 @@
   color: $font-white;
 }
 
-.taglineBtn{
+.taglineBtn {
+  position: relative;
   background-color: transparent;
   border: none;
+  padding: 0;
   outline: none;
   color: $default;
-  text-decoration: underline dashed;
-
+  font-weight: 700;
+  border-bottom: 1px dashed $default;
   cursor: pointer;
   transition: all .3s ease-in-out;
 
   &:hover {
     color: $hover;
+    border-color: $hover;
   }
 }
+
 .dot {
   color: $default;
+  font-weight: 700;
 }
