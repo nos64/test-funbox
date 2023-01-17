@@ -18,14 +18,12 @@
   width: 320px;
   height: 480px;
   padding-left: 48px;
-  background-color: $background-color;
-  background-repeat: no-repeat;
-  background-position: center 213px;
   border-radius: 10px;
   clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
   overflow:hidden; 
   cursor: pointer;
-  background-image: url("../../assets/images/Photo-50.png");
+  background: $background-color left -24px bottom -20px  url("../../assets/images/Photo-50.png") no-repeat;
+  background-size: 350px;
   color: $font-disabled;
   cursor: auto;
 }
