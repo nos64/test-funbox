@@ -7,7 +7,7 @@ import { ICard } from 'types/types';
 import styles from './Card.module.scss';
 
 const Card: React.FC<ICard> = (props) => {
-  const { hero, title, subtitle, amount, bonus, extra, weight, unit, linkText } = props;
+  const { hero, title, subtitle, bonus, weight, unit, linkText } = props;
 
   const [isSelected, setIsSelected] = useState(false);
   const [isMouseOnCard, setIsMouseOnCard] = useState(false);
@@ -32,31 +32,31 @@ const Card: React.FC<ICard> = (props) => {
   return (
     <li className={styles.cardContent}>
       <div
-        className={isSelected ? `${styles.cardBorder} ${styles.active}` : styles.cardBorder}
+        className={
+          isSelected ? `${styles.cardBorder} ${styles.cardBorder_active}` : styles.cardBorder
+        }
         onClick={handleClick}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
         <div className={styles.card}>
           {!isMouseOnCard ? (
-            <p className={styles.heroText}>{hero}</p>
+            <p className={styles.card__heroText}>{hero}</p>
           ) : (
-            <p className={styles.heroTextSelectedHover}>{selectedHoverMessage}</p>
+            <p className={styles.card__heroTextSelectedHover}>{selectedHoverMessage}</p>
           )}
-          <h2 className={styles.title}>{title}</h2>
-          <p className={styles.subtitle}>{subtitle}</p>
-          <div className={styles.description}>
-            <p className={styles.amount}>{amount}</p>
-            <p className={styles.bonus}>{bonus}</p>
-            {/* <p className={styles.bonus}>{bonus}</p>
-            <p className={styles.bonus}>{bonus}</p>
-            <p className={styles.bonus}>{bonus}</p>
-            <p className={styles.bonus}>{bonus}</p> */}
-            {extra && <p className={styles.extra}>{extra}</p>}
-          </div>
-          <div className={isSelected ? `${styles.oval} ${styles.active}` : styles.oval}>
-            <p className={styles.weight}>{weight}</p>
-            <p className={styles.unit}>{unit}</p>
+          <h2 className={styles.card__title}>{title}</h2>
+          <p className={styles.card__subtitle}>{subtitle}</p>
+          <ul className={styles.card__description}>
+            {bonus.map((item, index) => (
+              <li key={index} className={styles.card__bonus}>
+                {item}
+              </li>
+            ))}
+          </ul>
+          <div className={isSelected ? `${styles.oval} ${styles.oval_active}` : styles.oval}>
+            <p className={styles.oval__weight}>{weight}</p>
+            <p className={styles.oval__unit}>{unit}</p>
           </div>
         </div>
       </div>
