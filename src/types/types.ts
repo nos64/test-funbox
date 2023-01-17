@@ -3,9 +3,7 @@ export interface ICard {
   hero: string;
   title: string;
   subtitle: string;
-  amount: string;
-  bonus: string;
-  extra: string;
+  bonus: string[];
   weight: string;
   unit: string;
   linkText: string;
