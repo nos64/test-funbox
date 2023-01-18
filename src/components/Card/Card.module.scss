@@ -1,37 +1,38 @@
 @import '../../styles/colors.scss';
 
-.cardBorder {
+.card {
   position: relative;
   width: 328px;
   min-height: 488px;
-  clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
-  background-color: $default;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all .3s ease-in-out;
-
-  &:hover {
-    background-color: $hover;
-  }
-
-  &:hover>.card>.oval {
-    background-color: $hover;
-  }
-}
-
-.card {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 320px;
-  min-height: 480px;
   padding-left: 48px;
   background: $background-color left -24px bottom -20px  url("../../assets/images/Photo.png") no-repeat;
   background-size: 350px;
   border-radius: 10px;
   clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
-  overflow:hidden; 
   cursor: pointer;
+  border: 4px solid $default;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    border-color: $hover;
+  }
+
+  &:hover>.oval,
+  &:hover:before {
+    background-color: $hover;
+  }
+}
+
+.card:before {
+  content: '';
+  position: absolute;
+  top: 19px;
+  left: -15px;
+  width: 70px;
+  height: 6px;
+  background-color: $default;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease-in-out;
 }
 
 .card__heroText {
@@ -87,15 +88,27 @@
   line-height: 22px;
 }
 
-.cardBorder_active,
+.card_active {
+  border-color: $selected;
+
+  &:before {
+    background-color: $selected;
+  }
+
+  &:hover {
+    border-color: $selected-hover;
+  }
+
+  &:hover:before,
+  &:hover>.oval {
+    background-color: $selected-hover;
+  }
+}
+
 .oval_active {
   background-color: $selected;
 
   &:hover {
-    background-color: $selected-hover;
-  }
-
-  &:hover>.card>.oval {
     background-color: $selected-hover;
   }
 }

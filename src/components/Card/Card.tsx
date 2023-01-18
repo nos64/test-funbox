@@ -33,31 +33,29 @@ const Card: React.FC<ICard> = (props) => {
     <li className={styles.cardContent}>
       <div
         className={
-          isSelected ? `${styles.cardBorder} ${styles.cardBorder_active}` : styles.cardBorder
+          isSelected ? `${styles.card} ${styles.card_active}` : styles.card
         }
         onClick={handleClick}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <div className={styles.card}>
-          {!isMouseOnCard ? (
-            <p className={styles.card__heroText}>{hero}</p>
-          ) : (
-            <p className={styles.card__heroTextSelectedHover}>{selectedHoverMessage}</p>
-          )}
-          <h2 className={styles.card__title}>{title}</h2>
-          <p className={styles.card__subtitle}>{subtitle}</p>
-          <ul className={styles.card__description}>
-            {bonus.map((item, index) => (
-              <li key={index} className={styles.card__bonus}>
-                {item}
-              </li>
-            ))}
-          </ul>
-          <div className={isSelected ? `${styles.oval} ${styles.oval_active}` : styles.oval}>
-            <p className={styles.oval__weight}>{weight}</p>
-            <p className={styles.oval__unit}>{unit}</p>
-          </div>
+        {!isMouseOnCard ? (
+          <p className={styles.card__heroText}>{hero}</p>
+        ) : (
+          <p className={styles.card__heroTextSelectedHover}>{selectedHoverMessage}</p>
+        )}
+        <h2 className={styles.card__title}>{title}</h2>
+        <p className={styles.card__subtitle}>{subtitle}</p>
+        <ul className={styles.card__description}>
+          {bonus.map((item, index) => (
+            <li key={index} className={styles.card__bonus}>
+              {item}
+            </li>
+          ))}
+        </ul>
+        <div className={isSelected ? `${styles.oval} ${styles.oval_active}` : styles.oval}>
+          <p className={styles.oval__weight}>{weight}</p>
+          <p className={styles.oval__unit}>{unit}</p>
         </div>
       </div>
       <LinkText linkText={linkText} isSelected={isSelected} setIsSelected={setIsSelected} />
