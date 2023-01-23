@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import LinkText from './LinkText';
 
-import { selectedHoverMessage } from '../../common/constants';
+import { BASE_URL, selectedHoverMessage } from '../../common/constants';
 import { ICard } from 'types/types';
 import styles from './Card.module.scss';
 
@@ -53,7 +53,7 @@ const Card: React.FC<ICard> = (props) => {
             </li>
           ))}
         </ul>
-        <img className={styles.card__image} src={image} srcSet={`${image2x} 2x`} alt="Изображение продукта" />
+        <img className={styles.card__image} src={`${BASE_URL}/${image}`} srcSet={`${BASE_URL}/${image2x} 2x`} alt="Изображение продукта" />
         <div className={isSelected ? `${styles.oval} ${styles.oval_active}` : styles.oval}>
           <p className={styles.oval__weight}>{weight}</p>
           <p className={styles.oval__unit}>{unit}</p>

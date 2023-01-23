@@ -1,5 +1,8 @@
 import React from 'react';
+
 import { ICard } from 'types/types';
+import { BASE_URL } from '../../common/constants';
+
 import styles from './CardSoldOut.module.scss';
 
 const CardSoldOut: React.FC<ICard> = (props) => {
@@ -18,7 +21,7 @@ const CardSoldOut: React.FC<ICard> = (props) => {
             </li>
           ))}
         </ul>
-        <img className={styles.card__image} src={image} srcSet={`${image2x} 2x`} alt="Изображение продукта" />
+        <img className={styles.card__image} src={`${BASE_URL}/${image}`} srcSet={`${BASE_URL}/${image2x} 2x`} alt="Изображение продукта" />
         <div className={styles.oval}>
           <p className={styles.oval__weight}>{weight}</p>
           <p className={styles.oval__unit}>{unit}</p>
