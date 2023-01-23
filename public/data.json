@@ -8,7 +8,8 @@
   "weight": "0,5",
   "unit": "кг",
   "linkText": "Печень утки разварная с артишоками.",
-  "image": "../src/assets/images/Photo.png",
+  "image": "../src/assets/images/Photo-x1.png",
+  "image2x": "../src/assets/images/Photo-x2.png",
   "isSoldOut": false
   },
   {
@@ -20,7 +21,8 @@
     "weight": "2",
     "unit": "кг",
     "linkText": "Головы щучьи с чесноком да свежайшая сёмгушка.",
-    "image": "../src/assets/images/Photo.png",
+    "image": "../src/assets/images/Photo-x1.png",
+    "image2x": "../src/assets/images/Photo-x2.png",
     "isSoldOut": false
   },
   {
@@ -32,7 +34,8 @@
     "weight": "5",
     "unit": "кг",
     "linkText": "Филе из цыплят с трюфелями в бульоне.",
-    "image": "../src/assets/images/Photo.png",
+    "image": "../src/assets/images/Photo-x1.png",
+    "image2x": "../src/assets/images/Photo-x2.png",
     "isSoldOut": true
   }
 ]
