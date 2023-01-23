@@ -3,7 +3,7 @@ import { ICard } from 'types/types';
 import styles from './CardSoldOut.module.scss';
 
 const CardSoldOut: React.FC<ICard> = (props) => {
-  const { hero, title, subtitle, bonus, weight, unit, linkText } = props;
+  const { hero, title, subtitle, bonus, weight, unit, image } = props;
 
   return (
     <li className={styles.cardContent}>
@@ -18,6 +18,7 @@ const CardSoldOut: React.FC<ICard> = (props) => {
             </li>
           ))}
         </ul>
+        <img className={styles.card__image} src={image} alt="Изображение продукта" />
         <div className={styles.oval}>
           <p className={styles.oval__weight}>{weight}</p>
           <p className={styles.oval__unit}>{unit}</p>

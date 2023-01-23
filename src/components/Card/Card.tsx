@@ -7,7 +7,7 @@ import { ICard } from 'types/types';
 import styles from './Card.module.scss';
 
 const Card: React.FC<ICard> = (props) => {
-  const { hero, title, subtitle, bonus, weight, unit, linkText } = props;
+  const { hero, title, subtitle, bonus, weight, unit, image, linkText } = props;
 
   const [isSelected, setIsSelected] = useState(false);
   const [isMouseOnCard, setIsMouseOnCard] = useState(false);
@@ -53,6 +53,7 @@ const Card: React.FC<ICard> = (props) => {
             </li>
           ))}
         </ul>
+        <img className={styles.card__image} src={image} alt="Изображение продукта" />
         <div className={isSelected ? `${styles.oval} ${styles.oval_active}` : styles.oval}>
           <p className={styles.oval__weight}>{weight}</p>
           <p className={styles.oval__unit}>{unit}</p>
