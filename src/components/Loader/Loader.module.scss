@@ -1,0 +1,49 @@
+@import '../../styles/colors.scss';
+
+.loaderContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loader {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+.loader span {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 12px solid #bbb;
+  border-top: 12px solid $default;
+  animation: animate 1s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+      transform: rotate(0deg);
+  }
+
+  25%{
+      transform: rotate(90deg);
+  }
+
+  50%{
+      transform: rotate(180deg);
+  }
+
+  75%{
+      transform: rotate(270deg);
+  }
+
+  100%{
+      transform: rotate(360deg);
+  }
+}

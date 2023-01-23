@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import Card from '../Card';
 import CardSoldOut from '../CardSoldOut';
+import Loader from '../Loader';
 
 import { getData } from '../../api/axios';
 import { ICard } from 'types/types';
@@ -16,11 +17,16 @@ const CardList = () => {
     })();
   }, []);
   return (
-    <ul className={styles.contentWrapper}>
-      {cards.map((card) =>
+    <>
+    {cards.length ?( 
+      <ul className={styles.contentWrapper}>
+      {cards.map((card: JSX.IntrinsicAttributes & ICard) =>
         !card.isSoldOut ? <Card key={card.id} {...card} /> : <CardSoldOut key={card.id} {...card} />
       )}
     </ul>
+    ) : <Loader />}
+    </>
+    
   );
 };
 
