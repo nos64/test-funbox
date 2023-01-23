@@ -7,5 +7,7 @@ export interface ICard {
   weight: string;
   unit: string;
   linkText: string;
+  image: string;
+  image2x: string;
   isSoldOut: boolean;
 }

@@ -5,8 +5,7 @@
   width: 328px;
   min-height: 488px;
   padding-left: 48px;
-  background: $background-color left -24px bottom -20px  url("../../assets/images/Photo.png") no-repeat;
-  background-size: 350px;
+  background: $background-color;
   border-radius: 10px;
   clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
   cursor: pointer;
@@ -33,6 +32,12 @@
   background-color: $default;
   transform: rotate(-45deg);
   transition: all 0.3s ease-in-out;
+}
+
+.card__image {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .card__heroText {
