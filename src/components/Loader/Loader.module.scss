@@ -21,7 +21,7 @@
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  border: 12px solid #bbb;
+  border: 12px solid $background-color;
   border-top: 12px solid $default;
   animation: animate 1s linear infinite;
 }
