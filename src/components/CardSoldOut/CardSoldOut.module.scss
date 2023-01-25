@@ -2,8 +2,8 @@
 
 .card {
   position: relative;
-  width: 328px;
-  min-height: 488px;
+  width: 320px;
+  min-height: 480px;
   padding-left: 48px;
   background: $background-color;
   border-radius: 10px;
@@ -52,7 +52,6 @@
 }
 
 .card__description {
-  font-weight: 400;
   font-size: 14px;
   line-height: 16px;
 }
@@ -90,6 +89,8 @@
   line-height: 20px;
   text-align: center;
   color: $font-yellow;
+
+
 }
 
 
