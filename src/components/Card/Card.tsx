@@ -46,9 +46,9 @@ const Card: React.FC<ICard> = (props) => {
         )}
         <h2 className={styles.card__title}>{title}</h2>
         <p className={styles.card__subtitle}>{subtitle}</p>
-        <ul className={styles.card__description}>
+        <ul className={styles.card__descriptionList}>
           {bonus.map((item, index) => (
-            <li key={index} className={styles.card__bonus}>
+            <li key={index}>
               {item}
             </li>
           ))}
