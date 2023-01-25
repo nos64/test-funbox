@@ -4,7 +4,8 @@
   position: relative;
   width: 320px;
   min-height: 480px;
-  padding-left: 48px;
+  display: flex;
+  flex-direction: column;
   background: $background-color;
   border-radius: 10px;
   clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
@@ -33,45 +34,66 @@
   &:hover:before {
     background-color: $hover;
   }
+
+  &_active {
+    border-color: $selected;
+  
+    &:before {
+      background-color: $selected;
+    }
+  
+    &:hover {
+      border-color: $selected-hover;
+    }
+  
+    &:hover:before,
+    &:hover>.oval {
+      background-color: $selected-hover;
+    }
+  }
+}
+
+.card__wrapperText {
+  padding-left: 48px;
+  flex-grow: 1;
+  margin-bottom: 10px;
+
+  .card__heroText {
+    padding: 21px 0 5px;
+    color: $font-grey;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .card__heroTextSelectedHover {
+    padding: 21px 0 5px;
+    color: $selected-hover;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  
+  .card__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+  }
+  
+  .card__subtitle {
+    padding-bottom: 15px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+  
+  .card__descriptionList {
+    color: $font-grey;
+    font-size: 14px;
+    line-height: 16px;
+  }
 }
 
 .card__image {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.card__heroText {
-  padding: 21px 0 5px;
-  color: $font-grey;
-  font-size: 16px;
-  line-height: 19px;
-}
-
-.card__heroTextSelectedHover {
-  padding: 21px 0 5px;
-  color: $selected-hover;
-  font-size: 16px;
-  line-height: 19px;
-}
-
-.card__title {
-  font-weight: 700;
-  font-size: 48px;
-  line-height: 56px;
-}
-
-.card__subtitle {
-  padding-bottom: 15px;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-}
-
-.card__descriptionList {
-  color: $font-grey;
-  font-size: 14px;
-  line-height: 16px;
+  opacity: 1;
 }
 
 .oval {
@@ -90,42 +112,27 @@
   font-weight: 400;
   hyphens: auto;
   transition: all .3s ease-in-out;
-}
 
-.oval__weight {
-  font-size: 42px;
-  line-height: 42px;
-}
+  &__weight {
+    font-size: 42px;
+    line-height: 42px;
+  }
 
-.oval__unit {
-  font-size: 21px;
-  line-height: 22px;
-}
+  &__unit {
+    font-size: 21px;
+    line-height: 22px;
+  }
 
-.card_active {
-  border-color: $selected;
-
-  &:before {
+  &_active {
     background-color: $selected;
-  }
-
-  &:hover {
-    border-color: $selected-hover;
-  }
-
-  &:hover:before,
-  &:hover>.oval {
-    background-color: $selected-hover;
+  
+    &:hover {
+      background-color: $selected-hover;
+    }
   }
 }
 
-.oval_active {
-  background-color: $selected;
 
-  &:hover {
-    background-color: $selected-hover;
-  }
-}
 
 
 
