@@ -7,7 +7,7 @@ html {
   hyphens: auto;
 
   @supports (hyphens: auto) {
-    word-break: break-all;
+    word-break: break-word;
   }
 }
 

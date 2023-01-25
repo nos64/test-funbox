@@ -32,9 +32,7 @@ const Card: React.FC<ICard> = (props) => {
   return (
     <li className={styles.cardContent}>
       <div
-        className={
-          isSelected ? `${styles.card} ${styles.card_active}` : styles.card
-        }
+        className={isSelected ? `${styles.card} ${styles.card_active}` : styles.card}
         onClick={handleClick}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -48,12 +46,15 @@ const Card: React.FC<ICard> = (props) => {
         <p className={styles.card__subtitle}>{subtitle}</p>
         <ul className={styles.card__descriptionList}>
           {bonus.map((item, index) => (
-            <li key={index}>
-              {item}
-            </li>
+            <li key={index}>{item}</li>
           ))}
         </ul>
-        <img className={styles.card__image} src={image} srcSet={`${image2x} 2x`} alt="Изображение продукта" />
+        <img
+          className={styles.card__image}
+          src={image}
+          srcSet={`${image2x} 2x`}
+          alt="Изображение продукта"
+        />
         <div className={isSelected ? `${styles.oval} ${styles.oval_active}` : styles.oval}>
           <p className={styles.oval__weight}>{weight}</p>
           <p className={styles.oval__unit}>{unit}</p>
