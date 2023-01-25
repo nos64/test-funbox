@@ -2,32 +2,30 @@
 
 .tagline {
   margin-top: 14px;
-  font-size: 13px;
   font-weight: 400;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 20px;
   text-align: center;
   color: $font-white;
-}
 
-.tagline__btn {
-  position: relative;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  outline: none;
-  color: $default;
-  font-weight: 700;
-  border-bottom: 1px dashed $default;
-  cursor: pointer;
-  transition: all .3s ease-in-out;
-
-  &:hover {
-    color: $hover;
-    border-color: $hover;
+  .tagline__btn {
+    position: relative;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    color: $default;
+    border-bottom: 1px dashed $default;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+  
+    &:hover {
+      color: $hover;
+      border-color: $hover;
+    }
   }
-}
 
-.tagline__dot {
-  color: $default;
-  font-weight: 700;
+  .tagline__dot {
+    color: $default;
+  }
 }
