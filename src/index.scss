@@ -4,6 +4,11 @@
 html {
   box-sizing: border-box;
   overflow-x: hidden;
+  hyphens: auto;
+
+  @supports (hyphens: auto) {
+    word-break: break-word;
+  }
 }
 
 * {

@@ -4,4 +4,8 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 80px;
+
+  @media (max-width: 1119px) {
+    margin-bottom: 36px;
+  }
 }

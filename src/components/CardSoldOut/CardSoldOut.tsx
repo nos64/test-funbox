@@ -11,17 +11,22 @@ const CardSoldOut: React.FC<ICard> = (props) => {
   return (
     <li className={styles.cardContent}>
       <div className={styles.card}>
-        <p className={styles.card__heroText}>{hero}</p>
-        <h2 className={styles.card__title}>{title}</h2>
-        <p className={styles.card__subtitle}>{subtitle}</p>
-        <ul className={styles.card__description}>
-          {bonus.map((item, index) => (
-            <li key={index} className={styles.card__bonus}>
-              {item}
-            </li>
-          ))}
-        </ul>
-        <img className={styles.card__image} src={`${BASE_URL}/${image}`} srcSet={`${BASE_URL}/${image2x} 2x`} alt="Изображение продукта" />
+        <div className={styles.card__wrapperText}>
+          <p className={styles.card__heroText}>{hero}</p>
+          <h2 className={styles.card__title}>{title}</h2>
+          <p className={styles.card__subtitle}>{subtitle}</p>
+          <ul className={styles.card__descriptionList}>
+            {bonus.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+        </div>
+        <img
+          className={styles.card__image}
+          src={`${BASE_URL}/${image}`}
+          srcSet={`${BASE_URL}/${image2x} 2x`}
+          alt="Изображение продукта"
+        />
         <div className={styles.oval}>
           <p className={styles.oval__weight}>{weight}</p>
           <p className={styles.oval__unit}>{unit}</p>
