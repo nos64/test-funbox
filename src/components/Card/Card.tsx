@@ -32,7 +32,11 @@ const Card: React.FC<ICard> = (props) => {
   return (
     <li className={styles.cardContent}>
       <div
-        className={isSelected ? `${styles.card} ${styles.card_active}` : styles.card}
+        className={
+          !isMouseOnCard 
+            ? (isSelected ? `${styles.card} ${styles.card_selected}` : styles.card)
+            : `${styles.card} ${styles.card_selectedHover}`
+          }
         onClick={handleClick}
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
@@ -57,7 +61,7 @@ const Card: React.FC<ICard> = (props) => {
           srcSet={`${BASE_URL}/${image2x} 2x`}
           alt="Изображение продукта"
         />
-        <div className={isSelected ? `${styles.oval} ${styles.oval_active}` : styles.oval}>
+        <div className={isSelected ? `${styles.oval} ${styles.oval_selected}` : styles.oval}>
           <p className={styles.oval__weight}>{weight}</p>
           <p className={styles.oval__unit}>{unit}</p>
         </div>
