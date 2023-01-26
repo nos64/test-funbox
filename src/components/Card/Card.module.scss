@@ -26,30 +26,30 @@
     transition: all 0.3s ease-in-out;
   }
 
-  &:hover {
+  &:hover:not(.card_selected,.card_selectedHover) {
     border-color: $hover;
   }
 
-  &:hover>.oval,
-  &:hover:before {
+  &:hover:not(.card_selected,.card_selectedHover)>.oval,
+  &:hover:not(.card_selected,.card_selectedHover):before {
     background-color: $hover;
   }
 
-  &_active {
+  &_selected {
     border-color: $selected;
   
     &:before {
       background-color: $selected;
     }
-  
-    &:hover {
-      border-color: $selected-hover;
-    }
-  
-    &:hover:before,
-    &:hover>.oval {
-      background-color: $selected-hover;
-    }
+  }
+
+  &_selectedHover {
+    border-color: $selected-hover;
+  }
+
+  &_selectedHover:before,
+  &_selectedHover>.oval {
+    background-color: $selected-hover;
   }
 }
 
@@ -123,12 +123,8 @@
     line-height: 22px;
   }
 
-  &_active {
+  &_selected {
     background-color: $selected;
-  
-    &:hover {
-      background-color: $selected-hover;
-    }
   }
 }
 
